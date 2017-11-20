@@ -43,11 +43,8 @@ def draw?(board)
 end
 
 def over?(board)
-      if full?(board) == true
-        return true
-      end
-      return false
-    end
+  (won?(board)) || (full?(board)) || (draw?(board))
+end
 
 def winner(board)
   WIN_COMBINATIONS.detect do |win_combo|
