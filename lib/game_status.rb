@@ -34,20 +34,16 @@ def won?(board)
     end
 end
 
-
 def draw?(board)
   !(won?(board)) && (full?(board))
 end
-
 
 d def over?(board)
       if full?(board) == true
         return true
       end
-      return false 
+      return false
     end
-
-
 
 def winner(board)
   WIN_COMBINATIONS.detect do |win_combo|
