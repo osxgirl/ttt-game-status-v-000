@@ -4,7 +4,7 @@ def position_taken?(board, index)
 end
 
 # Define your WIN_COMBINATIONS constant
-win_conditions = [
+WIN_COMBINATIONS = [
   [0, 1, 2],
   [0, 3, 6],
   [0, 4, 8],
@@ -15,7 +15,7 @@ win_conditions = [
   [6, 7, 8],
 ]
 def won?(board)
-  win_conditions.each do |win|
+  win_combination.each do |win|
   if win.all?{|y| board[y] == "X"}
     return win
     elsif win.all?{|y| board[y] == "O"}
