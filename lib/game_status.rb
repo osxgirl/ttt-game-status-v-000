@@ -14,3 +14,13 @@ WIN_COMBINATIONS = [
   [3, 4, 5],
   [6, 7, 8],
 ]
+def won?(board)
+  win_conditions.each do |win|
+  if win.all?{|y| board[y] == "X"}
+    return win
+    elsif win.all?{|y| board[y] == "O"}
+      return win
+    end
+  end
+  return false 
+end
